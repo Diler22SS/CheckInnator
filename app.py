@@ -6,6 +6,8 @@ import uuid
 from flask import Flask, request, jsonify
 from experta import Fact, KnowledgeEngine, Rule, Field, MATCH
 
+# Даем путь к файлу бронирования относительно директории проекта
+BOOKINGS_FILE_PATH = os.path.join(os.getcwd(), "bookings.json")
 
 API_KEY = 'eabc2a42-d883-4a6d-ac0d-0e372b5f707e'
 BASE_URL = "https://catalog.api.2gis.com/3.0/items"
@@ -123,7 +125,7 @@ class HotelBookingEngine(KnowledgeEngine):
     def save_booking(self, id_user, name, city, check_in_date, check_out_date, n_guests):
         """Сохраняем бронирование в файл."""
         # Путь к файлу JSON
-        file_name = "bookings.json"
+        file_name = BOOKINGS_FILE_PATH
 
         # Структура данных для сохранения
         booking_data = {
@@ -159,7 +161,7 @@ class HotelBookingEngine(KnowledgeEngine):
     def read_bookings(self, id_user):
         """Вывод бронирований из файла."""
         # Путь к файлу JSON
-        file_name = "bookings.json"
+        file_name = BOOKINGS_FILE_PATH
 
         # Проверяем существование файла
         if not os.path.exists(file_name):
@@ -188,7 +190,7 @@ class HotelBookingEngine(KnowledgeEngine):
     @Rule(DeleteBookingFact(id=MATCH.id))
     def delete_booking(self, id):
         """Удаление бронирования из файла."""
-        filename = "bookings.json"
+        filename = BOOKINGS_FILE_PATH
 
         # Проверяем существование файла
         if not os.path.exists(filename):
