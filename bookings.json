@@ -1,0 +1,44 @@
+[
+    {
+        "id": "",
+        "id_user": "No name",
+        "name": "No name",
+        "check_in_date": "01.01.2022",
+        "check_out_date": "11.01.2022",
+        "n_guests": 2
+    },
+    {
+        "id": "",
+        "id_user": "008",
+        "name": "No name",
+        "check_in_date": "01.01.2022",
+        "check_out_date": "11.01.2022",
+        "n_guests": 3
+    },
+    {
+        "id": "",
+        "id_user": "008",
+        "name": "New Hotel",
+        "check_in_date": "01.01.2022",
+        "check_out_date": "31.01.2022",
+        "n_guests": 1
+    },
+    {
+        "id": "",
+        "id_user": "008",
+        "name": "New Hotel",
+        "city": "Иркутск",
+        "check_in_date": "01.01.2022",
+        "check_out_date": "31.01.2022",
+        "n_guests": 1
+    },
+    {
+        "id": "",
+        "id_user": "009",
+        "name": "New Hotel",
+        "city": "Иркутск",
+        "check_in_date": "01.01.2022",
+        "check_out_date": "31.01.2022",
+        "n_guests": 1
+    }
+]
