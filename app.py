@@ -229,7 +229,7 @@ def search_hotels():
     """Поиск отелей с учетом предпочтений пользователя и сортировки."""
     data = request.json
     city = data.get("city")
-    preferred_rating = data.get("preffered_rating", 4.0)
+    preferred_rating = float(data.get("preffered_rating", 4.0))
     sort_type = data.get("sort_type", "relevance")  # Можно передать тип сортировки, например, "rating" или "name"
 
     if not city:
